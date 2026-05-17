@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    color:white;
+    background:black;
+}
+
+/* BACKGROUND */
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        -45deg,
+        #ff0080,
+        #7928ca,
+        #00c6ff,
+        #ff4d6d
+    );
+
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    z-index:-1;
+}
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* SLIDE */
+
+.slide{
+    width:100%;
+    height:100vh;
+
+    position:absolute;
+    top:0;
+    left:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+
+    opacity:0;
+    transition:1s;
+}
+
+.slide.active{
+    left:0;
+    opacity:1;
+}
+
+.slide.exit{
+    left:-100%;
+    opacity:0;
+}
+
+/* TEXT */
+
+h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:1.2rem;
+    max-width:700px;
+    line-height:2;
+}
+
+/* BUTTON */
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+
+    background:white;
+    color:black;
+
+    font-weight:700;
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ff0080;
+    color:white;
+    box-shadow:0 0 25px #ff0080;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+/* GALLERY */
+
+.gallery{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:220px;
+    height:220px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+
+/* COVER */
+
+.cover{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+/* HEART */
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    animation:float linear forwards;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh) scale(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .gallery img{
+        width:140px;
+        height:140px;
+    }
+
+    .cover{
+        width:200px;
+        height:200px;
+    }
+
+}

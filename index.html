@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Special For Nara ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<audio id="music" loop>
+  <source src="lagu.mp3" type="audio/mp3">
+</audio>
+
+<!-- SLIDE 1 -->
+
+<section class="slide active">
+
+  <h1>Hallo My Best Friend</h1>
+
+  <p>
+    Aku punya sesuatu untuk kalian ✨
+  </p>
+
+  <button onclick="nextSlide()">
+    Klik Disini
+  </button>
+
+</section>
+
+<!-- SLIDE 2 -->
+
+<section class="slide">
+
+  <h1>Kalian Tau Ga?</h1>
+
+  <p>
+    Kehadiran kalian itu bikin hari-hariku jauh lebih baik ❤️
+  </p>
+
+  <button onclick="nextSlide()">
+    Lanjut
+  </button>
+
+</section>
+
+<!-- SLIDE 3 -->
+
+<section class="slide">
+
+  <h1>Special Message ✨</h1>
+
+  <div class="card">
+
+    <p>
+      Aku bersyukur banget punya kalian di hidupku.
+Di setiap keadaan, kalian selalu ada,nggak pernah benar-benar pergi, selalu jadi tempat aku pulang saat semuanya terasa berat.
+Terima kasih sudah jadi teman yang tulus, yang mau mendengar tanpa menghakimi, dan tetap bertahan meski mungkin aku nggak selalu mudah dipahami.
+Kalian berarti lebih dari yang bisa aku ucapkan.
+Semoga kita selalu bisa saling menjaga, meski waktu dan keadaan nanti berubah❤️
+    </p>
+
+  </div>
+
+  <button onclick="nextSlide()">
+    Baca Lagi
+  </button>
+
+</section>
+
+<!-- SLIDE 4 -->
+
+<section class="slide">
+
+  <h1>Sedikit Galerry kita ❤️</h1>
+
+  <div class="gallery">
+
+    <img src="img1.jpeg">
+    <img src="img2.jpeg">
+    <img src="img3.jpeg">
+    <img src="img4.jpeg">
+    <img src="img5.jpeg">
+
+  </div>
+
+  <button onclick="nextSlide()">
+    Lanjut Lagi
+  </button>
+
+</section>
+
+<!-- SLIDE 5 -->
+
+<section class="slide">
+
+  <h1>Lagu Untuk Kalian 🎵</h1>
+
+   <style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+/* Container video bulat */
+.video-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* Video full cover */
+.video-circle video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+</head>
+
+<body>
+
+<div class="video-circle">
+    <video autoplay muted loop playsinline>
+        <source src="cover.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+  <p>
+    Klik tombol di bawah buat denger lagu ❤️
+  </p>
+
+  <button onclick="playMusic()">
+    Putar Lagu
+  </button>
+
+  <button onclick="nextSlide()">
+    Next
+  </button>
+
+</section>
+
+<!-- SLIDE 6 -->
+
+<section class="slide">
+
+  <h1>Thank You ❤️</h1>
+
+  <p>
+    Semoga kalian suka website sederhana ini ✨
+  </p>
+
+  <p>
+    I’m happy to have you all❤️
+  </p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
